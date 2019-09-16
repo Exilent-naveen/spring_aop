@@ -1,12 +1,25 @@
 package com.example.aopdemo.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
 
     private Integer id;
     private String firstName;
     private String lastName;
     private String email;
+    private List<Car> cars;
 
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        Car car1 = new Car("Honda", "Jazz", 2019);
+        cars = new ArrayList<>();
+        cars.add(car1);
+    }
 
     public User() {
 
